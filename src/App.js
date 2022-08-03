@@ -56,7 +56,7 @@ export default class App extends Component {
       })
 
       .get(
-        `https://api.spaceflightnewsapi.net/v3/articles?title_contains=${i.target.value}`
+        `https://api.spaceflightnewsapi.net/v3/articles?title_contains=${i.target.value}&_limit=${this.state.count}`
       )
 
       .then((res) => {
